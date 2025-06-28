@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekomendasi</title>
+
+    <!-- Tailwind CSS  -->
+    <link href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Memuat Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Menggunakan font Inter sebagai font utama */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Menambahkan transisi yang mulus untuk item produk */
+        .product-item {
+            transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+        }
+
+        .product-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        
+        /* Animasi untuk fade-in saat filtering */
+        .item-hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-orange-100 min-h-screen text-gray-800">
+
+    <div class="container mx-auto p-4 pt-8 max-w-2xl">
+
+        <!-- Bagian Profil -->
+        <header class="text-center mb-8">
+            <h1 class="text-2xl md:text-3xl font-bold">Produk</h1>
+            <p class="text-gray-500 mt-1">Rekomendasi barang-barang favoritku!</p>
+        </header>
+
+        <!-- Bar Pencarian -->
+        <div class="relative mb-8">
+            <input 
+                type="text" 
+                id="search-bar"
+                placeholder="Cari produk di sini..."
+                class="w-full py-3 pl-10 pr-4 bg-white/80 backdrop-blur-sm rounded-full border border-gray-200 focus:ring-2 focus:ring-orange-400 focus:outline-none transition-shadow duration-300 shadow-sm"
+            >
+            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </div>
+
+        <!-- Daftar Produk -->
+        <main id="product-list" class="space-y-4">
+            
+            <!-- CONTOH PRODUK 1 -->
+            <!-- Ganti href, src gambar, dan teks sesuai produk Anda -->
+            <a href="#" target="_blank" rel="noopener noreferrer" class="product-item bg-white w-full p-4 rounded-xl shadow-md flex items-center space-x-4">
+                <img src="https://placehold.co/80x80/e2e8f0/4a5568?text=Produk" alt="Ikon Produk" class="w-16 h-16 rounded-lg object-cover" onerror="this.onerror=null;this.src='https://placehold.co/80x80/e2e8f0/4a5568?text=Gagal';">
+                <span class="flex-grow font-semibold product-title">Kamera Mirrorless Profesional XYZ</span>
+                <!-- Ikon Shopee -->
+                <img src="https://logolook.net/wp-content/uploads/2021/11/Shopee-Logo.png" alt="Shopee" class="w-8 h-8">
+            </a>
+
+            <!-- CONTOH PRODUK 2 -->
+            <a href="#" target="_blank" rel="noopener noreferrer" class="product-item bg-white w-full p-4 rounded-xl shadow-md flex items-center space-x-4">
+                <img src="https://placehold.co/80x80/e2e8f0/4a5568?text=Produk" alt="Ikon Produk" class="w-16 h-16 rounded-lg object-cover" onerror="this.onerror=null;this.src='https://placehold.co/80x80/e2e8f0/4a5568?text=Gagal';">
+                <span class="flex-grow font-semibold product-title">Headphone Bluetooth Kedap Suara</span>
+                <img src="https://logolook.net/wp-content/uploads/2021/11/Shopee-Logo.png" alt="Shopee" class="w-8 h-8">
+            </a>
+
+            <!-- CONTOH PRODUK 3 -->
+            <a href="#" target="_blank" rel="noopener noreferrer" class="product-item bg-white w-full p-4 rounded-xl shadow-md flex items-center space-x-4">
+                <img src="https://placehold.co/80x80/e2e8f0/4a5568?text=Produk" alt="Ikon Produk" class="w-16 h-16 rounded-lg object-cover" onerror="this.onerror=null;this.src='https://placehold.co/80x80/e2e8f0/4a5568?text=Gagal';">
+                <span class="flex-grow font-semibold product-title">Smartwatch Fitness Tracker Pro</span>
+                <img src="https://logolook.net/wp-content/uploads/2021/11/Shopee-Logo.png" alt="Shopee" class="w-8 h-8">
+            </a>
+
+            <!-- CONTOH PRODUK 4 -->
+            <a href="#" target="_blank" rel="noopener noreferrer" class="product-item bg-white w-full p-4 rounded-xl shadow-md flex items-center space-x-4">
+                <img src="https://placehold.co/80x80/e2e8f0/4a5568?text=Produk" alt="Ikon Produk" class="w-16 h-16 rounded-lg object-cover" onerror="this.onerror=null;this.src='https://placehold.co/80x80/e2e8f0/4a5568?text=Gagal';">
+                <span class="flex-grow font-semibold product-title">Tas Ransel Laptop Anti Air</span>
+                <img src="https://logolook.net/wp-content/uploads/2021/11/Shopee-Logo.png" alt="Shopee" class="w-8 h-8">
+            </a>
+            
+            <!-- ...Tambahkan produk lainnya di sini dengan format yang sama... -->
+
+        </main>
+        
+        <!-- Pesan jika produk tidak ditemukan -->
+        <div id="not-found-message" class="text-center py-10 text-gray-500 item-hidden">
+            <p class="font-semibold">Yah, produknya tidak ditemukan :(</p>
+            <p class="text-sm">Coba kata kunci lain.</p>
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="text-center mt-12 pb-8">
+            <p class="text-gray-500 text-sm">&copy; 2024 Nama Anda</p>
+        </footer>
+    </div>
+
+    <script>
+        // --- Skrip untuk Fungsi Pencarian ---
+        
+        // Mendapatkan elemen yang dibutuhkan dari halaman
+        const searchBar = document.getElementById('search-bar');
+        const productList = document.getElementById('product-list');
+        const productItems = productList.getElementsByClassName('product-item');
+        const notFoundMessage = document.getElementById('not-found-message');
+
+        // Menambahkan event listener ke bar pencarian
+        searchBar.addEventListener('keyup', function(event) {
+            // Mengambil teks pencarian dan mengubahnya menjadi huruf kecil
+            const searchQuery = event.target.value.toLowerCase();
+            let productsFound = 0;
+
+            // Melakukan iterasi untuk setiap item produk
+            for (let i = 0; i < productItems.length; i++) {
+                const item = productItems[i];
+                // Mengambil judul produk dari dalam item
+                const titleElement = item.querySelector('.product-title');
+                const productTitle = titleElement.textContent.toLowerCase();
+
+                // Memeriksa apakah judul produk mengandung teks pencarian
+                if (productTitle.includes(searchQuery)) {
+                    // Jika cocok, tampilkan item
+                    item.classList.remove('item-hidden');
+                    productsFound++;
+                } else {
+                    // Jika tidak cocok, sembunyikan item
+                    item.classList.add('item-hidden');
+                }
+            }
+
+            // Menampilkan atau menyembunyikan pesan "tidak ditemukan"
+            if (productsFound > 0) {
+                notFoundMessage.classList.add('item-hidden');
+            } else {
+                notFoundMessage.classList.remove('item-hidden');
+            }
+        });
+    </script>
+</body>
+</html>
+
